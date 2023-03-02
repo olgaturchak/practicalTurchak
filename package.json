@@ -1,0 +1,30 @@
+{
+  "name": "practicalturchak",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgaturchak/practicalTurchak.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olgaturchak/practicalTurchak/issues"
+  },
+  "homepage": "https://github.com/olgaturchak/practicalTurchak#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "console": "^0.7.2",
+    "events": "^3.3.0",
+    "file-system": "^1.2.9",
+    "fs": "^0.0.1-security",
+    "readline-sync": "^1.4.10",
+    "string_decoder": "^1.3.0",
+    "swd": "^1.0.0"
+  }
+}
