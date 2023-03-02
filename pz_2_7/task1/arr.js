@@ -1,0 +1,1 @@
+const arr = [{"number":"1","name":"Влад","lastname":"Бублик"},{"number":"2","name":"Олег","lastname":"Ковальчук"}]
