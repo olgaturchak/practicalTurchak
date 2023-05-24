@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+<form action="/test/result/saved" method="post">
+
+    <p><%=name + ' ' + surname%></p>
+
+    <p style="margin-bottom: 0">Загальна кількість питань: <%= results.length %> </p>
+    <p style="padding-bottom: 15px; margin: 0">Кількість правильних відповідей: <%= count %> </p>
+    <p style="margin: 0">Тест</p>
+    <% for (let i = 0; i < results.length; i++) { %>
+        <p style="margin: 0">Запитання <%= i+1%></p>
+        <% if(answers[i] === results[i].correct) { %>
+            <span style="color: green; font-weight: bold; font-family: serif; font-style: oblique" ><%= results[i].text %></span>
+        <% } else { %>
+            <span style="color: red; font-weight: bold; font-family: serif; font-style: oblique"><%= results[i].text %></span>
+        <% } %>
+        <ul>
+            <li>
+                <% if (results[i].correct === 'a') { %>
+                    <span style="color: green;"><%= results[i].a %></span>
+                <% } else if (answers[i] === 'a') { %>
+                    <span style="color: blue;"><%= results[i].a %></span>
+                <% } else { %>
+                    <span style="color: black;"><%= results[i].a %></span>
+                <% } %>
+            </li>
+            <li>
+                <% if (results[i].correct === 'b') { %>
+                    <span style="color: green;"><%= results[i].b %></span>
+                <% } else if (answers[i] === 'b') { %>
+                    <span style="color: blue;"><%= results[i].b %></span>
+                <% } else { %>
+                    <span style="color: black;"><%= results[i].b %></span>
+                <% } %>
+            </li>
+            <li>
+                <% if (results[i].correct === 'c') { %>
+                    <span style="color: green;"><%= results[i].c %></span>
+                <% } else if (answers[i] === 'c') { %>
+                    <span style="color: blue;"><%= results[i].c %></span>
+                <% } else { %>
+                    <span style="color: black;"><%= results[i].c %></span>
+                <% } %>
+            </li>
+            <li>
+                <% if (results[i].correct === 'd') { %>
+                    <span style="color: green;"><%= results[i].d %></span>
+                <% } else if (answers[i] === 'd') { %>
+                    <span style="color: blue;"><%= results[i].d %></span>
+                <% } else { %>
+                    <span style="color: black;"><%= results[i].d %></span>
+                <% } %>
+            </li>
+        </ul>
+    <% } %>
+    <input type="text" name="name" hidden value="<%= name %>">
+    <input type="text" name="surname" hidden value="<%= surname %>">
+    <input type="text" name="count" hidden value="<%= count %>">
+    <a href="/">Back to homepage</a>
+    <button type="submit">Save files</button>
+</form>
+</body>
+</html>

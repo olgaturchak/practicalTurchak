@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Form</title>
+</head>
+
+<body>
+
+<h2><%= name + ' ' + surname %></h2>
+<h2>Тест</h2>
+<form action="test/result" method="post">
+
+    <% for (let i = 0; i < questions.length; i++) { %>
+        <div>
+            <p>Запитання <%= i+1%></p>
+            <p><%= questions[i].text %></p>
+            <label>
+                <input type="radio" name="answer<%= i %>" value="a">
+                <%= questions[i].a %>
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="answer<%= i %>" value="b">
+                <%= questions[i].b %>
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="answer<%= i %>" value="c">
+                <%= questions[i].c %>
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="answer<%= i %>" value="d">
+                <%= questions[i].d %>
+            </label>
+        </div>
+        <br>
+    <% } %>
+    <input type="text" name="name" hidden value="<%= name %>">
+    <input type="text" name="surname" hidden value="<%= surname %>">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
