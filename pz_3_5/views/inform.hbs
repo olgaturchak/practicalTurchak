@@ -1,0 +1,31 @@
+<div style="margin: 50px">
+    <h4>See detailed information</h4>
+
+
+    {{#if todos.length}}
+        <ul>
+            {{#each todos}}
+                <li class="todo">
+                    <form action="/details" method="post">
+                        <label>
+                            {{#if completed}}
+                                <input type="checkbox" checked name="completed">
+                                <span class="completed">{{title}}</span>
+                            {{else}}
+                                <input type="checkbox" name="completed">
+                                <span>{{title}}</span>
+                            {{/if}}
+
+                            <input type="hidden" value="{{_id}}" name="id">
+
+                            <button  class="btn btn-small" type="submit"><a style="color: white" href="/details/{{_id}}">Read more</a></button>
+                        </label>
+                    </form>
+                </li>
+
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No todos!</p>
+    {{/if}}
+</div>

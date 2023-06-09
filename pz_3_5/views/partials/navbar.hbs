@@ -1,0 +1,48 @@
+<nav class="blue-darken-4">
+    <div class="nav-wrapper">
+        <a STYLE="margin-left: 10px" href="/" class="brand-logo">MITIT</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+
+            {{#if isIndex}}
+                <li class="active"><a href="/">Main</a></li>
+            {{else}}
+                <li><a href="/">Main</a></li>
+            {{/if}}
+
+
+            {{#if isCreate}}
+                <li class="active"><a href="/create">Create</a></li>
+            {{else}}
+                <li><a href="/create">Create</a></li>
+            {{/if}}
+
+            {{#if isIndex}}
+                <li class="active"><a href="/inform">Details</a></li>
+            {{else}}
+                <li><a href="/inform">Details</a></li>
+            {{/if}}
+
+            {{#if isCreate}}
+                <li class="active"><a href="/editsoldier">Edit</a></li>
+            {{else}}
+                <li><a href="/editsoldier">Edit soldier</a></li>
+            {{/if}}
+
+            {{#if isIndex}}
+                <li class="active"><a href="/editPosition">Edit Position</a></li>
+            {{else}}
+                <li><a href="/editPosition">Edit Position</a></li>
+            {{/if}}
+
+            {{#if isCreate}}
+                <li class="active"><a href="/editUnit">Edit unit</a></li>
+            {{else}}
+                <li><a href="/editUnit">Edit unit</a></li>
+            {{/if}}
+
+
+
+        </ul>
+    </div>
+</nav>

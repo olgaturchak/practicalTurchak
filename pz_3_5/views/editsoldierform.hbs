@@ -1,0 +1,19 @@
+<form style="margin: 30px " action="/editsoldierform/{{id}}" method="post">
+    <h4>Редагування військовослужбовця</h4>
+    <label><b>Ім'я: </b></label>
+    <input value="{{title}}" name="title"/>
+
+    <label><b>Звання: </b></label>
+    <input value="{{ rank }}" name="rank"/>
+
+    <label><b>Рік народження: </b></label>
+    <input value="{{ year }}" name="year"/>
+
+    <label><b>Підрозділ:: </b></label>
+    <input value="{{ unitName }}" name="unit"/>
+
+    <label><b>Посада: </b></label>
+    <input value="{{positionName}}" name="position"/>
+
+    <button type="submit" class="btn">Save</button>
+</form>

@@ -1,0 +1,31 @@
+<div style="margin: 50px">
+    <h4>Choose unit to edit</h4>
+
+
+    {{#if uniqueArray.length}}
+        <ul>
+            {{#each uniqueArray}}
+                <li class="todo">
+                    <form action="/editOneUnit" method="post">
+                        <label>
+                            {{#if completed}}
+                                <input type="checkbox" checked name="completed">
+                                <span class="completed">{{this}}</span>
+                            {{else}}
+                                <input type="checkbox" name="completed">
+                                <span>{{this}}</span>
+                            {{/if}}
+
+                            <input type="hidden" value="{{_id}}" name="id">
+
+                            <button  class="btn btn-small" type="submit"><a style="color: white" href="/editOneUnit/{{this}}">Edit unit</a></button>
+                        </label>
+                    </form>
+                </li>
+
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No todos!</p>
+    {{/if}}
+</div>
